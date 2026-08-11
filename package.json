@@ -1,0 +1,20 @@
+{
+  "name": "jp-address-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that normalizes & verifies Japanese addresses for AI agents, with x402 metered billing and an autonomous AI board.",
+  "type": "module",
+  "main": "src/mcp_server.js",
+  "scripts": {
+    "start": "node src/mcp_server.js",
+    "board": "node scripts/run_board.js",
+    "grant": "node scripts/grant_credit.js",
+    "test:wiring": "node scripts/test_wiring.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.30.0",
+    "@geolonia/normalize-japanese-addresses": "^3.0.0",
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "nodemailer": "^9.0.3"
+  },
+  "license": "MIT"
+}

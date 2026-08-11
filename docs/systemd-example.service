@@ -1,0 +1,12 @@
+[Unit]
+Description=JP Address MCP server
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/jp-address-mcp
+ExecStart=/usr/bin/node src/mcp_server.js
+Restart=always
+EnvironmentFile=/opt/jp-address-mcp/.env
+
+[Install]
+WantedBy=multi-user.target
